@@ -1,0 +1,18 @@
+<% @pizza.each_slice(3) do |pizzas| %>
+  <div class="row">
+    <% pizzas.each do |pizza| %>
+      <div class="col-md-4">
+        <div class="pizza">
+          <div class="image_wrapper">
+            <%= link_to pizza do %>
+              <%= image_tag pizza.image.url(:medium) %>
+            <% end %>
+          </div>
+          <h2>
+            <%= link_to pizza.title, pizza %>
+          </h2>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>

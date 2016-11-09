@@ -7,10 +7,15 @@ gem 'rails', '4.2.6'
 gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+gem 'simple_form', '~> 3.2', '>= 3.2.1'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'paperclip', '~> 4.3', '>= 4.3.6'
+gem 'rmagick', '~> 2.15', '>= 2.15.4'
+gem 'cocoon', '~> 1.2', '>= 1.2.9'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
