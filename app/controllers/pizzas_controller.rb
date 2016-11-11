@@ -1,5 +1,6 @@
 class PizzasController < ApplicationController
-before_action :find_pizza, only: [:show, :edit, :update, :destroy]
+  before_action :find_pizza, only: [:show, :edit, :update, :destroy]
+	
 	def index
 		@pizza = Pizza.all.order("created_at DESC")
 	end
