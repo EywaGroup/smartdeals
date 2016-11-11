@@ -1,12 +1,10 @@
-<div class="main_content">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+ <div class="main_content">
   <div class="row" id="pizza_top">
     <div class="col-md-4">
-
-
-
+<%array = Array.new()%>
 <div class="alert alert-success">Pizza was successfully commissioned!</div>
    
-
 
    
       <%= image_tag @pizza.image.url(:medium), class: "pizza_image" %>
@@ -36,11 +34,36 @@
               vendor number:
               <%= ingredient.vendor_number %>
             </li>
+            <% tranzaction = create_tranzaction(ingredient.name,ingredient.vendor_number,ingredient.price)%>
+            <%array.push(tranzaction)%>            
           <% end %>
         </ul>
       </div>
     </div>
   </div>
+
+
+
+<html>
+  <head>
+    
+    <script src="smart_deals_app.js"></script>
+  </head>
+  <body ng-app="smartDeals" ng-controller="MainCtrl">
+    <div>
+      {{test}}
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
   <div class="row">
     <div class="col-md-12">
       <%= link_to "Back", root_path, class: "btn btn-default" %>

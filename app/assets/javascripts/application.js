@@ -15,4 +15,5 @@
 //= require cocoon
 //= require angular
 //= require turbolinks
+//= require angular-material
 //= require_tree .

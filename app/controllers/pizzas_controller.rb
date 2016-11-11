@@ -1,5 +1,21 @@
 class PizzasController < ApplicationController
-before_action :find_pizza, only: [:show, :edit, :update, :destroy]
+helper_method :create_tranzaction
+	before_action :find_pizza, only: [:show, :edit, :update, :destroy]
+
+class Tranzaction
+	attr_accessor :name,:vendor_number,:price
+  def initialize(name="", vendor_number="", price="")
+    @name    = name
+    @vendor_number   = vendor_number
+    @price = price
+  end
+end
+def create_tranzaction(name, vendor_number,price)
+		@tranzaction = Tranzaction.new(name,vendor_number,price)
+		@tranzaction
+end
+
+
 	def index
 		@pizza = Pizza.all.order("created_at DESC")
 	end
