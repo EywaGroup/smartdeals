@@ -1,4 +1,5 @@
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+     <script src="smart_deals_app.js"></script>
  <div class="main_content">
   <div class="row" id="pizza_top">
     <div class="col-md-4">
@@ -17,6 +18,10 @@
         <p class="description">
           <%= @pizza.description %>
         </p>
+        <%= link_to "Info", info_index_path, class: "btn btn-default" %>
+<%= render 'info' %>
+
+<%= render 'info2' %>
       </div>
     </div>
   </div>
@@ -41,29 +46,9 @@
       </div>
     </div>
   </div>
-
-
-
-<html>
-  <head>
-    
-    <script src="smart_deals_app.js"></script>
-  </head>
-  <body ng-app="smartDeals" ng-controller="MainCtrl">
     <div>
       {{test}}
     </div>
-  </body>
-</html>
-
-
-
-
-
-
-
-
-
   <div class="row">
     <div class="col-md-12">
       <%= link_to "Back", root_path, class: "btn btn-default" %>
