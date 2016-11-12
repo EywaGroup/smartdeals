@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require cocoon
+
 //= require angular
 //= require turbolinks
 //= require angular-material

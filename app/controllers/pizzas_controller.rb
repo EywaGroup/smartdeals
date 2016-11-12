@@ -2,14 +2,15 @@ class PizzasController < ApplicationController
 helper_method :create_tranzaction
 	before_action :find_pizza, only: [:show, :edit, :update, :destroy]
 
-class Tranzaction
+   class Tranzaction
 	attr_accessor :name,:vendor_number,:price
   def initialize(name="", vendor_number="", price="")
-    @name    = name
-    @vendor_number   = vendor_number
-    @price = price
+     @name    = name
+     @vendor_number   = vendor_number
+     @price = price
   end
 end
+
 def create_tranzaction(name, vendor_number,price)
 		@tranzaction = Tranzaction.new(name,vendor_number,price)
 		@tranzaction
@@ -21,7 +22,12 @@ end
 	end
 
 	def show
-
+				@array = Array.new()
+				@pizza.ingredients.each do |ingredient| 
+				tranzaction = create_tranzaction(ingredient.name,ingredient.vendor_number,ingredient.price)
+            @array.push(tranzaction)           
+             end 
+				session[:array] = @array
 	end
 
 	def new

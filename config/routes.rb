@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get 'info/index'
-
-  get 'info/index'
+  resources :info
 
   resources :pizzas
 

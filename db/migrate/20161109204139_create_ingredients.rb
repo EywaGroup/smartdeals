@@ -3,7 +3,7 @@ class CreateIngredients < ActiveRecord::Migration
     create_table :ingredients do |t|
       t.string :name
       t.integer :price
-      t.integer :vendor_number
+      t.string :vendor_number
       t.belongs_to :pizza, index: true, foreign_key: true
 
       t.timestamps null: false

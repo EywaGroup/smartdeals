@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html></html>
+
 <head>
   <title>Pizza App</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
+
 <body ng-app="smartDeals" ng-controller="MainCtrl">
   <nav class="navbar navbar-default">
     <div class="container">
@@ -17,15 +22,15 @@
             <%= link_to "New Pizza", new_pizza_path %>
           </li>
           <li>
-            <%= link_to "Sign Out" %>
+            <%= link_to "Sign Out", root_path%>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <%= link_to "Sign Up" %>
+            <%= link_to "Sign Up" , root_path%>
           </li>
           <li>
-            <%= link_to "Sign In" %>
+            <%= link_to "Sign In" , root_path%>
           </li>
         </ul>
     </div>
@@ -37,3 +42,4 @@
     <%= yield %>
   </div>
 </body>
+
